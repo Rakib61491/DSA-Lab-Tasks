@@ -28,8 +28,7 @@ class Song{
     Node* curr;
 public:
     Song(){
-        head = NULL;
-        curr = NULL;
+        head = NULL; curr = NULL;
     }
 
     void playlist(){
@@ -55,20 +54,20 @@ public:
             return;
         }
         Node* temp = head;
-        while(temp->next!=NULL){
+        while(temp!=curr){    // Goes to CURR song
             temp = temp->next;
         }
+        newNode->next = temp->next;
+        if(temp->next!=NULL)    // If Curr is last song, then when constructing new song after curr, there would be no song left (NULL) and NULL doesn't need to have 'prev'.
+            temp->next->prev = newNode;
         temp->next = newNode;
         newNode->prev = temp;
-        curr = newNode;    // If curr not in end, then I have to use insertAfterElement instead of insertEnd
+        curr = temp->next;
+        return;        
     }
 
     void prev(){
-        if(curr==NULL){
-            cout << "No Song\n";
-            return;
-        }
-        if(curr->prev==NULL){
+        if(curr==NULL || curr->prev==NULL){
             cout << "No Song\n";
             return;
         }
@@ -76,15 +75,44 @@ public:
     }
 
     void next(){
-        if(curr==NULL){
-            cout << "No Song\n";
-            return;
-        }
-        if(curr->next==NULL){
+        if(curr==NULL || curr->next==NULL){
             cout << "No Song\n";
             return;
         }
         curr = curr->next;
+    }
+
+    void remove(){
+        if(curr==NULL){
+            cout << "No Song\n";
+            return;
+        }
+        if(curr==head){    // If curr is HEAD
+            if(curr->next == NULL){    // If only one song left in playlist
+                delete curr;
+                head = curr = NULL;
+                cout << "No Song\n";
+                return;
+            }
+            head = curr->next;
+            delete curr;
+            curr = head;
+            return;
+        }
+
+        Node* temp = curr;
+        if(curr->next==NULL){    //If curr is the last element
+            curr = curr->prev;
+            curr->next = NULL;
+        }
+        else{    // Else- Curr is in middle and it has next song
+            curr->prev->next = curr->next;
+            curr->next->prev = curr->prev;
+            curr = curr->next;
+        }
+        delete temp;
+        return;
+
     }
 };
 
@@ -108,11 +136,11 @@ int main(){
             s1.next();
         }
         else if(command == "REMOVE"){
-            cout << "The Current song is removed\n";
+            s1.remove();
         }
         else if(command == "SHOW"){
             s1.playlist();
-            break;
+            // break;
         }
         else{
             cout << "Please type again\n";
