@@ -1,5 +1,5 @@
 // Question : Given an array of integers, identify all elements that appear more than once.
-// For each such eleemet, insert the total count of that element immediately after its last occurrence.
+// For each such element, insert the total count of that element immediately after its last occurrence.
 // Example : Input : arr = [4, 2, 4, 3, 2, 2, 5]
 // Output : arr = [4, 2, 4, 2, 3, 2, 2, 3, 5]
 
