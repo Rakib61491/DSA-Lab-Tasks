@@ -28,16 +28,14 @@ The laboratory sessions are designed to provide hands-on implementation experien
 | Lab Area       | Concepts Covered               | Key Implementations                          |
 |----------------|--------------------------------|---------------------------------------------|
 | 🧩 Arrays       | Traversal, Searching, Sorting  | Reverse array, Duplicate finding, Sum & frequency |
-| 🔗 Linked List  | Singly, Doubly, Circular Lists | Insertion, Deletion, Traversal              |
 | 📦 Stack        | LIFO Structure                 | Push, Pop, Expression evaluation            |
 | 🚶 Queue        | FIFO Structure                 | Enqueue, Dequeue, Circular Queue            |
 | 🔄 Deque        | Double-ended Queue             | Insert/Delete from both ends                 |
-| 🔀 Sorting      | Internal Sorting Algorithms    | Bubble, Selection, Insertion, Merge, Quick  |
-| 🔍 Binary Search| Divide & Conquer Searching     | Iterative & Recursive search                 |
-| 🌳 Trees        | Hierarchical Structures        | BST insertion, Traversal                     |
-| 🪵 Heap         | Priority-based Trees           | Min-Heap, Max-Heap                           |
+| 🔗 Linked List  | Singly, Doubly                 | Insertion, Deletion, Traversal              |
+| 🔍 Binary Search| Divide & Conquer Searching     | Iterative & Recursive search, Insertion, Traversal |
 | 🗺️ Graph        | Network Structures             | BFS, DFS Traversal                            |
-| #️⃣ Hashing      | Key-Value Mapping             | Hash tables, Collision handling             |
+| 🔀 Sorting      | Internal Sorting Algorithms    | Bubble, Selection, Insertion, Merge, Quick  |
+| 🪵 Heap         | Priority-based Trees           | Min-Heap, Max-Heap                           |
 
 
 

@@ -2,7 +2,6 @@
 using namespace std;
 #define MAX 100000
 
-// Made by ChatGPT , as my capacity was exhausted after completing B1_Version01.cpp , which involved heavily twisted and repetitive logic and required repeated, mental power draining error checking.
 
 void inputArray(int arr[], int n) {
     for (int i = 0; i < n; i++)
